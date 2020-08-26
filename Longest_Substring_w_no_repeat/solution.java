@@ -1,5 +1,6 @@
 
 class Solution {
+    //add my new solution
     public int lengthOfLongestSubstring(String s) {
         int longest = 0;
         

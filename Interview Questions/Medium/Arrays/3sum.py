@@ -22,20 +22,25 @@ def threeSum(nums):
             continue  
         #left  
         b = i+1
-        #rifht
+        #right
         c = len(nums) -1
         while b < c:
+            #calculated sum early to reduce that run time and reuse variable
             sumV = nums[i] + nums[b] + nums[c]
+            #if we found a correct value increase left decrease right similar to sequencing problems
             if sumV == 0:
+
                 ans.append([nums[i],nums[b],nums[c]])
                 b += 1
                 c -= 1
+                #this to check for b position repeats
                 while nums[b] == nums[b-1] and b < c:
                     b = b +1
 
-                
+            #decrease right index   
             elif sumV > 0:
                 c -= 1
+            #increase left index    
             elif  sumV < 0:
                 b += 1
         

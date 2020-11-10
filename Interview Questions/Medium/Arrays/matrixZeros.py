@@ -1,7 +1,9 @@
 
 def setZeroes(matrix):
     """
-    Do not return anything, modify matrix in-place instead.
+    The main idea was to flag the first col or first row with zeros while iterating over rows 2---n 
+    after that we again to a loop to check for those zeros and flag the appropriate bits. Once we finish this we 
+    finally add our zeros to the first row as the other rows depend on the first rows and cols
     """
     zeroFirst = False
     indexSave = None

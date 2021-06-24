@@ -1,0 +1,25 @@
+Interface:
+change state(Traffic light)
+Report state 
+
+
+Classes: 
+Traffic Signal: state (field)
+
+Methods: change()
+        reportState()
+
+GreenLight:
+    change (trafficSignal light){
+        light.state = yellow()
+    }
+    YellowLight:
+    change (trafficSignal light){
+        light.state = Green()
+    }
+    redLight:
+    change (trafficSignal light){
+        light.state = Green()
+    }
+OTHER STATE
+another like RED to GREEN and from GREEN to ORANGE to RED etc.

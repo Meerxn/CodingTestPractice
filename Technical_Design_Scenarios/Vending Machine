@@ -1,0 +1,44 @@
+PsuedoCode
+
+Classes:
+
+Vendine Machine: High level information in this part/ high level api/interface
+
+Fields:
+- Count
+- Capacity
+- Total Money
+- Manufacturer
+
+Methods:
+- SelectItemandgetPrice // sold out exception
+- Insert Coins // not fully paid  exception
+- Refund
+- Collect Item and get change throws not sufficient change exception 
+- Reset
+
+
+
+Item: For each item in the vending machine
+
+Fields:
+Name
+Price
+
+Methods:
+get name, get Price
+
+Coin class/dictionary
+
+
+Inventory: Meant to hold cash items (private to vending machine)
+getQuantity()
+addItems()
+deductCash()
+hasItem()
+Clear()
+
+
+
+
+

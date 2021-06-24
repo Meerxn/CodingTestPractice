@@ -1,0 +1,37 @@
+Requirements: 
+- Given a UTRL we need to generate a shorter link
+- Redirection to original link
+- Users should optionally be able to pick cutsom link 
+- Have an usable API for other websites
+- expiring links
+
+
+API: 
+createURL: apikey orig url cutom alias username expire date
+DeleteURL: api key: url key( string rep of the url)
+
+DATABASE DESIGN:
+NOSQL database 
+URL: hash, orig, alias userID
+USER: UserId, Name,Email CreationDate: datetime, LastLogin:datetime
+
+
+Encomding Url:
+Hash fuction
+
+
+Issues: 
+Multiple users same url not accepted
+same url location (with ecoding) but different url
+
+Workaround: add user details in url / add number increment (overflow?)
+
+For url storage use hash based partioning (consistent hashing)
+
+
+Load balancing
+Between Clients and Application servers
+Between Application Servers and database servers
+Between Application Servers and Cache servers
+
+Expired links deleted in db with another service

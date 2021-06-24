@@ -1,0 +1,30 @@
+Requirement:
+A one-on-one chat with low delivery latency
+Small group chat (max of 100 people)
+Online presence
+Multiple device support. The same account can be logged in to multiple accounts at the same time.
+Push notifications
+
+HIGH LEVEL DESIGN:
+SENDER --> message--> CHAT SERVICE (Store message and relay message) --> message Reciever
+
+USING HTTP this can be done but quite client centric and its not server centric
+
+
+WE USE POLLING,Long polling and Web sockets
+
+polling: sending conenction (to server){
+    // waiting for new messages long polling is waiting we have a message
+}
+
+
+A way to get rid of running of polling is web sockets{
+    bidrectional connection enabled  SENDER <---> CHAT SERVICE and Reciever <-----> Chat Service
+}
+Users connecting to load balancer which connect to API servers 
+Users alos conenct to chat service with chat servers and present servers
+Thirs part for notifications
+
+
+
+
